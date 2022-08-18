@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="icon" href="CSS/Weather.png">
+    <title>Weather</title>
+</head>
+<body>
+    <form action="/" method="post">
+        <div class="box row">
+
+            <!-- LEFT HAND SIDE DATA -->
+            <div class="location col-lg-4">
+                <div class="card report">
+                    <div class="card-body data" style="text-align:center" id="place"><%=city%>, <%=country%></div>
+                    <div class="card-body data" style="text-align:center">
+                        <p class="sky"><%=sky%></p>
+                        
+                        <%if(icon==="01d"){%>
+                            <img src="CSS/01d.png" alt="01d">
+                        <%}%>
+                        <%if(icon==="01n"){%>
+                            <img src="CSS/01n.png" alt="01n">
+                        <%}%>
+                        <%if(icon==="02d"){%>
+                            <img src="CSS/02d.png" alt="02d">
+                        <%}%>
+                        <%if(icon==="02n"){%>
+                            <img src="CSS/02n.png" alt="02n">
+                        <%}%>
+                        <%if(icon==="03n" || icon==="03d"){%>
+                            <img src="CSS/03.png" alt="03">
+                        <%}%>
+                        <%if(icon==="04d" || icon==="04n"){%>
+                            <img src="CSS/04.png" alt="04">
+                        <%}%>
+                        <%if(icon==="09n" || icon==="09d"){%>
+                            <img src="CSS/09.png" alt="09">
+                        <%}%>
+                        <%if(icon==="10d"){%>
+                            <img src="CSS/10d.png" alt="10d">
+                        <%}%>
+                        <%if(icon==="10n"){%>
+                            <img src="CSS/10n.png" alt="10n">
+                        <%}%> 
+                        <%if(icon==="11n" || icon==="11d"){%>
+                            <img src="CSS/11.png" alt="11">
+                        <%}%> 
+                        <%if(icon==="13n" || icon==="13d"){%>
+                            <img src="CSS/13.png" alt="13">
+                        <%}%> 
+                        <%if(icon==="50n" || icon==="50d"){%>
+                            <img src="CSS/50.png" alt="50">
+                        <%}%> 
+                                            
+                        <p class="data1" style="text-align:center"><%= temp %>°C</p>
+                        <p class="text" style="text-align:center">Feels like <%=feels%>°C</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT HAND SIDE DATA -->
+            <div class="info col-lg-8">
+                <input type="text" type="submit" placeholder="Search a city" name="city" autocomplete="off">
+                <div class="row">
+                    <!-- HUMIDITY -->
+                    <div id="humidity" class="col-lg-4 col-md-6 col-sm-6 rbox">
+                        <div class="card">
+                            <p class="text">HUMIDITY</p>
+                            <div class="row">
+                                <div class="col-5"><img class="pic" src="CSS/humidity.png" alt="humid"></div>
+                                <div class="col-7">
+                                    <p class="data"><%=humid%></p>
+                                    <p class="text2">%</p>
+                                </div>
+                            </div> 
+                        </div>                        
+                    </div>
+                    <!-- WIND SPEED -->
+                    <div id="windspeed" class="col-lg-4 col-md-6 col-sm-6 rbox">
+                        <div class="card">
+                            <p class="text">WIND SPEED</p>
+                            <div class="row">
+                                <div class="col-5"><img class="pic" src="CSS/wind speed.png" alt="Wind"></div>
+                                <div class="col-7">
+                                    <p class="data"><%=windspeed%></p>
+                                    <p class="text2">m/s</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- WIND DIRECTION -->
+                    <div id="winddirect" class="col-lg-4 col-md-6 col-sm-12 rbox">
+                        <div class="card">
+                            <p class="text">WIND DIRECTION</p>
+                            <div class="row">
+                                <div class="col-5"><img class="pic" src="CSS/wind direction.png" alt="wind direction"></div>
+                                <div class="col-7">
+                                    <p class="data"><%=winddirection%></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- VISIBILITY -->
+                    <div id="visi" class="col-lg-4 col-md-6 col-sm-12 rbox">
+                        <div class="card">
+                            <p class="text">VISIBILITY</p>
+                            <div class="row">
+                                <div class="col-5"><img class="pic" src="CSS/visibility.png" alt="visibbolity"></div>
+                                <div class="col-7">
+                                    <p class="data"><%=visi%></p>
+                                    <p class="text2">km</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SUNRISE -->
+                    <div id="sunrise" class="col-lg-4 col-md-6 col-sm-12 rbox">
+                        <div class="card">
+                            <p class="text">SUNRISE</p>
+                            <div class="row">
+                                <div class="col-5"><img class="pic" src="CSS/sunrise.png" alt="sunrise"></div>
+                                <div class="col-7">
+                                    <p class="data"><%=sunrise%></p>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SUNSET -->
+                    <div id="sunset" class="col-lg-4 col-md-6 col-sm-12 rbox">
+                        <div class="card">
+                            <p class="text">SUNSET</p>
+                            <div class="row">
+                                <div class="col-5"><img class="pic" src="CSS/sunset.png" alt="sunset"></div>
+                                <div class="col-7">
+                                    <p class="data"><%=sunset%></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+        </div>   
+    </form> 
+</body>
+</html>

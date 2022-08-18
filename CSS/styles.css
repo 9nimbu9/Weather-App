@@ -1,0 +1,98 @@
+body
+{
+    background-color: lightblue;
+    text-align: center;
+}
+.rbox
+{
+    text-align: center;
+    margin: 5% auto 0 auto;
+    height: auto;
+    width: 250px;
+}
+form
+{
+    margin:2%;
+    background: -webkit-linear-gradient(-45deg, rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 98%);
+    border-radius: 25px;
+    width: auto;
+    height: auto;
+}
+.card
+{
+    border-radius: 25px;
+    width: 100%;
+    border: 0;
+    background: -webkit-linear-gradient(-45deg, rgba(241,241,241,1) 8%,rgba(255,255,255,1) 37%,rgba(225,225,225,1) 66%,rgba(246,246,246,1) 100%)
+}
+p
+{
+    margin: 0;
+    padding: 0.5rem;
+}
+img
+{
+    width: 300px;
+    height: 300px;
+}
+.text
+{
+    font-size: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: end;
+    padding-bottom: 0;
+}
+.data
+{
+    font-size: 193%;
+    text-align: end;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    padding-bottom: 0;
+}
+input
+{ 
+    border-radius: 25px;
+    border: 0;
+    height: 40px;
+    width: 150px;
+    padding: 0.5rem;
+    margin: 2% auto;
+}
+.data1
+{
+    font-size: 280%;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+}
+.pic
+{
+    width: 100px;
+    height: 100px;
+    padding: 1rem;
+}
+.report
+{
+    border-radius: 25px;
+    height: 100%;
+}
+#place
+{
+    font-size: 290%;
+    border-radius: 25px 0 0 0;
+}
+.sky
+{
+    font-size: 90%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.text2
+{
+    text-align: end;
+    padding-top: 0%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.info
+{
+    padding: 2rem;
+}
